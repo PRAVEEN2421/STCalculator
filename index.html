@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="style.css" rel="stylesheet">
+    <title>MARK CALCULATOR</title>
+</head>
+
+<body>
+    <div class="Marks">
+        <h1>Student Marks Calculation</h1>
+        <hr>
+        <table>
+            <tr>
+                <td><label>Name : </label></td>
+                <td><input type="text" placeholder="Enter name" id="name"><br></td>
+            </tr>
+            <tr>
+                <td><label>ID : </label></td>
+                <td><input type="number" placeholder="Enter student ID" id="id"><br></td>
+            </tr>
+            <tr>
+                <td> <label>Address :</label></td>
+                <td class="one"><textarea row="3" cols="20" placeholder="Enter The Address"></textarea><br></td>
+            </tr>
+            <tr>
+                <td> <label>Mark 1 :</label></td>
+                <td><input type="number" placeholder=" Enter mark" id="mark1"><br></td>
+            </tr>
+            <tr>
+                <td><label>Mark 2 :</label></td>
+
+                <td> <input type="number" placeholder="Enter mark" id="mark2"><br></td>
+            </tr>
+            <tr>
+                <td> <label>Mark 3 :</label></td>
+                <td><input type="number" placeholder="Enter mark" id="mark3"><br></td>
+            </tr>
+
+            <tr>
+                <td><label>Mark 4 :</label></td>
+                <td><input type="number" placeholder="Enter mark" id="mark4"><br></td>
+            </tr>
+            <tr>
+                <td> <label>Mark 5 :</label></td>
+                <td> <input type="numberr" placeholder="Enter mark" id="mark5"><br></td>
+            </tr>
+            <tr>
+                <td><button id="Add">Total</button></td>
+
+
+                <td><input type="number" readonly id="result"><br></td>
+            </tr>
+            <tr>
+                <td><button id="Average">Percentage</button></td>
+                <td class="two"><input type="number" readonly id="average"> %</td>
+            </tr>
+        </table>
+
+    </div>
+    <script type="text/javascript">
+
+        var n1 = document.getElementById("mark1");
+        var n2 = document.getElementById("mark2");
+        var n3 = document.getElementById("mark3");
+        var n4 = document.getElementById("mark4");
+        var n5 = document.getElementById("mark5");
+        var res = document.getElementById("result");
+        var percentage = document.getElementById("average");
+
+        document.getElementById("Add").addEventListener
+            ("click", function () {
+                res.value = parseInt(n1.value) + parseInt(n2.value) + parseInt(n3.value) + parseInt(n4.value) + parseInt(n5.value);
+            });
+        document.getElementById("Average").addEventListener
+            ("click", function () {
+                average.value = parseInt(res.value / 500 * 100);
+            });
+    </script>
+</body>
+
+</html>
